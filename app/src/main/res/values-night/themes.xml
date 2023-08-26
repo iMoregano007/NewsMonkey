@@ -3,5 +3,10 @@
     <style name="Base.Theme.NewsMonkey" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/myPrimary</item>
+        <item name="colorPrimaryVariant">@color/myPrimary</item>
+        <item name="colorSecondary">@color/mySecondary</item>
+        <item name="colorSecondaryVariant">@color/mySecondary</item>
+        <item name="android:statusBarColor">@color/myPrimary</item>
     </style>
 </resources>

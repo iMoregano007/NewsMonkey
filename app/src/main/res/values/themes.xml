@@ -3,6 +3,11 @@
     <style name="Base.Theme.NewsMonkey" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/myPrimary</item>
+        <item name="colorPrimaryVariant">@color/myPrimary</item>
+        <item name="colorSecondary">@color/mySecondary</item>
+        <item name="colorSecondaryVariant">@color/mySecondary</item>
+        <item name="android:statusBarColor">@color/myPrimary</item>
     </style>
 
     <style name="Theme.NewsMonkey" parent="Base.Theme.NewsMonkey" />

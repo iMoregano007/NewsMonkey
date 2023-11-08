@@ -7,38 +7,83 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/myPrimary"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="32sp" />
 
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/title_bar"
-        android:layout_marginTop="5dp"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
+        android:layout_margin="4dp"
+        android:id="@+id/horizontal_btns">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@color/myPrimary"
-            android:fontFamily="sans-serif-smallcaps"
-            android:textSize="32sp" />
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:queryHint="Search News"
+                android:layout_gravity="center"
+                android:id="@+id/search_btn"/>
 
-        <TextView
-            android:id="@+id/searchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="GENERAL"
+                android:id="@+id/btn1"
+                />
 
-            android:layout_gravity="center"
-            android:text="s"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="BUSINESS" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="ENTERTAINMENT" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="HEALTH" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="SCIENCE" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="SPORTS" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="TECHNOLOGY" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:layout_width="wrap_content"

@@ -1,5 +1,6 @@
 package com.im_oregano007.newsmonkey;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,12 @@ public class NewsRecyclerAdapter extends  RecyclerView.Adapter<NewsRecyclerAdapt
                 .error(R.drawable.no_image)
                 .placeholder(R.drawable.no_image)
                 .into(holder.imageView);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(),NewsDetailActivity.class);
+            intent.putExtra("url",article.getUrl());
+            view.getContext().startActivity(intent);
+        });
     }
 
     @Override

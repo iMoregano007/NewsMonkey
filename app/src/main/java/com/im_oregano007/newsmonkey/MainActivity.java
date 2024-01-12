@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.kwabenaberko.newsapilib.NewsApiClient;
 import com.kwabenaberko.newsapilib.models.Article;
@@ -27,13 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearProgressIndicator progressBar;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
     SearchView searchView;
+    ShimmerFrameLayout shimmerFrameLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        shimmerFrameLayout = findViewById(R.id.shimmer_view);
         recyclerView = findViewById(R.id.news_recyclerView);
         progressBar = findViewById(R.id.progressBar);
 
@@ -85,8 +87,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void changeInProgress(boolean show){
         if(show){
             progressBar.setVisibility(View.VISIBLE);
+            shimmerFrameLayout.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.INVISIBLE);
         } else {
             progressBar.setVisibility(View.INVISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+            shimmerFrameLayout.setVisibility(View.GONE);
         }
     }
 
@@ -128,4 +134,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+
 }

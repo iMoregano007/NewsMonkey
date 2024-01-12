@@ -35,6 +35,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.github.KwabenBerko:News-API-Java:1.0.2")
     implementation("com.squareup.picasso:picasso:2.8")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
